@@ -1,0 +1,223 @@
+/* You can add global styles to this file, and also import other style files */
+
+
+@import "font-awesome/css/font-awesome.min.css"  ;
+
+/* Styles pour la barre de navigation */
+.navbar {
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
+}
+
+.navbar-brand {
+  color: #fff;
+  font-weight: bold;
+  text-decoration: none;
+  margin-right: 20px;
+}
+
+.navbar-nav {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-item {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.nav-link {
+  color: #fff;
+  text-decoration: none;
+  padding: 8px 12px;
+}
+
+/* Styles pour le dropdown */
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  padding: 10px;
+}
+
+.dropdown-item {
+  display: block;
+  color: #333;
+  text-decoration: none;
+  padding: 5px;
+}
+
+.dropdown-item:hover {
+  background-color: #e3e3e3;
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+
+
+.container {
+  margin-bottom: 20px; /* Ajout de l'espace */
+
+
+  background-color: #f2f2f2;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Ajout de l'ombre */
+
+}
+
+.button-row {
+  display: flex;
+  margin-bottom: 10px;
+}
+
+.button {
+  flex: 1;
+  margin-right: 5px;
+  padding: 10px;
+  background-color: #1a5276; /* Couleur bleu foncé */
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.button:last-child {
+  margin-right: 0;
+}
+
+.form {
+  display: flex;
+  align-items: center;
+}
+
+.form input {
+  margin-right: 5px;
+  padding: 5px;
+}
+
+.search-button {
+  padding: 5px;
+  background-color: #1a5276; /* Couleur bleu foncé */
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.search-button i {
+  font-size: 16px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+thead th {
+  background-color: #f2f2f2;
+  font-weight: bold;
+  text-align: left;
+  padding: 10px;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+tbody td {
+  padding: 10px;
+}
+
+tbody td:first-child {
+  font-weight: bold;}
+
+
+.status-button {
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  font-size: 12px;
+  cursor: pointer;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.status-button.selected {
+  background-color: green;
+  padding: 8px 16px; /* Ajuste l'espace autour du texte */
+
+}
+
+.status-button.unselected {
+  background-color: red;  padding: 8px 25px; /* Ajuste l'espace autour du texte */
+
+}
+.delete-button {
+  background-color: #d9534f;
+  color: #fff;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.add-button {
+  background-color: #1a5276; /* Couleur bleu foncé */
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.add-product-form {
+  margin-top: 20px;
+  border: 1px solid #ccc;
+  padding: 20px;
+  border-radius: 4px;
+  background-color: #f5f5f5;
+}
+
+.add-product-form h3 {
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.add-product-form .form-group {
+  margin-bottom: 15px;
+}
+
+.add-product-form label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.add-product-form input[type="text"],
+.add-product-form input[type="number"],
+.add-product-form input[type="checkbox"] {
+  width: 100%;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.add-product-form .submit-button,
+.add-product-form .cancel-button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.add-product-form .submit-button {
+  background-color: #337ab7;
+  color: #fff;
+}
+
+.add-product-form .cancel-button {
+  background-color: #ccc;
+  color: #000;
+  margin-left: 10px;
+}
