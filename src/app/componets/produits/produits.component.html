@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Exemple de boutons dans une ligne</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+
+<div class="container">
+  <div class="button-row">
+    <button class="button" (click)="showAllProducts()">ALL</button>
+    <button class="button" (click)="showSelectedProducts()">SELECTED</button>
+    <button class="button" (click)="showAvailableProducts()">AVAILABLE</button>
+    <button class="add-button" (click)="showAddProductForm()">Add Product</button>
+
+  </div>
+  <form #f="ngForm" (submit)="showSearchProducts(f.value)" >
+    <div class="form">
+      <input ngModel name="key" type="text" placeholder="Rechercher..."   >
+      <button class="search-button" type="submit"><i class="fas fa-search"></i></button>
+    </div>
+  </form>
+
+</div>
+
+  <table *ngIf ="produits">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Nom</th>
+        <th>Prix</th>
+        <th>Quantité</th>
+        <th>Available</th>
+        <th>Selected</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let p of produits  ">
+        <td>{{p.id}}</td>
+        <td>{{p.name}}</td>
+        <td>{{p.price}}</td>
+        <td>{{p.quantity}}</td>
+        <td>{{p.available}}</td>
+        <td>{{p.selected}}</td>
+
+        <td>
+          <button (click)="OnSelect(p)" class="status-button" [class.selected]="!p.selected" [class.unselected]="p.selected">
+            {{ p.selected ? 'Selected' : 'Unselected' }}
+          </button>
+        </td>
+      <td> <button class="delete-button" (click)="deleteProduct(p)"><i class="fas fa-trash"></i></button></td>
+
+      </tr>
+
+      <!-- Ajoutez ici d'autres lignes pour les autres produits -->
+    </tbody>
+  </table>
+
+</body>
+</html>
